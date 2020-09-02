@@ -1,0 +1,19 @@
+.cardmeetup{
+    display: flex;
+    background: #2d3436;
+    color: #fff;
+}
+
+.cardmeetup > div{
+    margin: 10px;
+    font-family: helvetica;
+    font-size: 16px;
+}
+
+table tr td{
+    padding : 8px 50px;
+}
+
+table tr td:first-child{
+    padding: 8px 0px;
+}

@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container{
+  width: 100%;
+  padding: 10px;
+  font-family: helvetica;
+  color: #282c34;
+}
+
+.conCard{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.conCardPast{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+[class*="full"]{
+  width: 100%;
 }

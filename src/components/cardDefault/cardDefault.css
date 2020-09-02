@@ -1,0 +1,13 @@
+.cardDefault{
+    width: 100%;
+    background: #2d3436;
+    color: #fff;
+    text-align: justify;
+    box-sizing: border-box;
+    padding: 20px 30px;
+}
+
+.cardDefault a{
+    color: #00b894;
+    text-decoration: none;
+}
