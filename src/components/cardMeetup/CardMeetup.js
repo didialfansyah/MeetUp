@@ -27,11 +27,11 @@ const CardMeetup = ({heading, htmIn, display, src, radius, width, height, hide})
     );
 }
 
-CardMeetup.prototype = {
+CardMeetup.propType = {
     heading : PropTypes.string.isRequired,
     htmlIn : PropTypes.element.isRequired,
     display : PropTypes.string, 
-    src : PropTypes.string, 
+    src : PropTypes.string.isRequired, 
     radius : PropTypes.string, 
     width : PropTypes.string, 
     height : PropTypes.string, 
@@ -39,8 +39,11 @@ CardMeetup.prototype = {
 }
 
 CardMeetup.defaultProps = {
-    heding : "Type Heading Here",
-    htmlIn : <p>Type Content Here....</p>
+    display : "inherit",
+    radius : "none",
+    width : "100px",
+    height : "100px",
+    hide : "inherit"
 }
 
 export default CardMeetup

@@ -17,8 +17,8 @@ const Navbar = ({list}) => {
     );
 }
 
-Navbar.prototype = {
-    list : PropTypes.array,
+Navbar.propType = {
+    list : PropTypes.array.isRequired,
 }
 
 export default Navbar

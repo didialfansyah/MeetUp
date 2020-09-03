@@ -1,6 +1,11 @@
 *{
   box-sizing: border-box;
 }
+
+body{
+  background: #dfe6e9;
+}
+
 .App {
   text-align: center;
 }
@@ -42,7 +47,7 @@
 
 .container{
   width: 100%;
-  padding: 10px;
+  padding: 30px;
   font-family: helvetica;
   color: #282c34;
 }

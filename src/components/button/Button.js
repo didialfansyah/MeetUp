@@ -8,14 +8,15 @@ const Button = ({type, value, hide}) => {
     );
 }
 
-Button.prototype = {
+Button.propType = {
     type : PropTypes.oneOf(['submit', 'reset', 'button']),
-    value : PropTypes.string,
+    value : PropTypes.string.isRequired,
     hide : PropTypes.string
 }
 
 Button.defaultProps = {
-    type : 'submit'
+    type : 'submit',
+    hide : "inherit"
 }
 
 export default Button

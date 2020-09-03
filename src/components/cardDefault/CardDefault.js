@@ -14,10 +14,10 @@ const CardDefault = ({heading, link, content}) => {
     );
 }
 
-CardDefault.prototype = {
-    heading : PropTypes.string,
-    link : PropTypes.string.isRequired,
-    content : PropTypes.string
+CardDefault.propType = {
+    heading : PropTypes.string.isRequired,
+    link : PropTypes.string,
+    content : PropTypes.string.isRequired
 }
 
 CardDefault.defaultProps = {

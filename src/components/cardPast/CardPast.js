@@ -18,15 +18,13 @@ const CardPast = ({dated, content, view}) => {
     );
 }
 
-CardPast.prototype = {
+CardPast.propType = {
     dated : PropTypes.string.isRequired, 
     content : PropTypes.string.isRequired, 
-    view : PropTypes.number.isRequired
+    view : PropTypes.number
 }
 
 CardPast.defaultProps = {
-    dated : "Write Date Here",
-    content : "Type Your Content Here",
     view : 0
 }
 
