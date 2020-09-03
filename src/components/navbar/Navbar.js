@@ -17,7 +17,7 @@ const Navbar = ({list}) => {
     );
 }
 
-Navbar.propType = {
+Navbar.propTypes = {
     list : PropTypes.array.isRequired,
 }
 

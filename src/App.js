@@ -8,8 +8,25 @@ import Footer from './components/footer/Footer'
 //import logo from './logo.svg';
 import './App.css';
 
-
 function App() {
+  const dataContent = [
+    {
+      date : "31 Agustus 2020",
+      content : "Etiam lobortis a tortor non commodo. Praesent lobortis tempus orci sit amet congue.",
+      view : "120"
+    },
+    {
+      date : "24 Agustus 2020",
+      content : "Etiam lobortis a tortor non commodo. Praesent lobortis tempus orci sit amet congue.",
+      view : "127"
+    },
+    {
+      date : "11 Agustus 2020",
+      content : "Etiam lobortis a tortor non commodo. Praesent lobortis tempus orci sit amet congue.",
+      view : "146"
+    },
+  ];
+
   return (
     <div className="container-full">
       <Navbar
@@ -85,26 +102,12 @@ function App() {
           />
         </div>
       </div>
-
+      
       <div className="container">
         <h2>Past MeetUp</h2>
         <div className="conCardPast">
-        <CardPast
-          dated="31 Agustus 2020"
-          content="Etiam lobortis a tortor non commodo. Praesent lobortis tempus orci sit amet congue."
-          view="139"
-        />
-        <CardPast
-          dated="20 Agustus 2020"
-          content="Etiam lobortis a tortor non commodo. Praesent lobortis tempus orci sit amet congue."
-          view="120"
-        />
-        <CardPast
-          dated="7 Agustus 2020"
-          content="Etiam lobortis a tortor non commodo. Praesent lobortis tempus orci sit amet congue."
-          view="230"
-        />
-      </div>
+          <CardPast data={dataContent}/>
+        </div>
       </div>
 
       <Footer/>

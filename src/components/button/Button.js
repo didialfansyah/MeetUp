@@ -8,7 +8,7 @@ const Button = ({type, value, hide}) => {
     );
 }
 
-Button.propType = {
+Button.propTypes = {
     type : PropTypes.oneOf(['submit', 'reset', 'button']),
     value : PropTypes.string.isRequired,
     hide : PropTypes.string

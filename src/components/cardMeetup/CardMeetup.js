@@ -27,9 +27,9 @@ const CardMeetup = ({heading, htmIn, display, src, radius, width, height, hide})
     );
 }
 
-CardMeetup.propType = {
+CardMeetup.propTypes = {
     heading : PropTypes.string.isRequired,
-    htmlIn : PropTypes.element.isRequired,
+    htmlIn : PropTypes.node.isRequired,
     display : PropTypes.string, 
     src : PropTypes.string.isRequired, 
     radius : PropTypes.string, 

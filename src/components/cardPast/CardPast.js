@@ -4,28 +4,26 @@ import PropTypes from 'prop-types'
 import Button from '../button/Button'
 import './cardPast.css'
 
-const CardPast = ({dated, content, view}) => {
+const CardPast = ({data}) => {
     return (
-        <div className="cardGrid">
-            <div className="first"><h3>{dated}</h3></div>
-            <p>{content}</p>
-            <p>{view} <font color="#00b894">Went</font></p>
-            <Button
-                type="submit"
-                value="View"
-            />
-        </div>
+        
+            data.map((show) =>
+                <div className="cardGrid" key={show.date}>
+                    <div className="first"><h3>{show.date}</h3></div>
+                    <p>{show.content}</p>
+                    <p>{show.view} <font color="#00b894">Went</font></p>
+                    <Button
+                        type="submit"
+                        value="View"
+                    />
+                </div>
+            )
+        
     );
 }
 
-CardPast.propType = {
-    dated : PropTypes.string.isRequired, 
-    content : PropTypes.string.isRequired, 
-    view : PropTypes.number
-}
-
-CardPast.defaultProps = {
-    view : 0
+CardPast.propTypes = {
+    data : PropTypes.array.isRequired,
 }
 
 export default CardPast

@@ -11,7 +11,7 @@ const Images = ({src, radius, width, height}) => {
     )
 }
 
-Images.propType = {
+Images.propTypes = {
     src : PropTypes.string.isRequired,
     radius : PropTypes.string,
     width : PropTypes.string,

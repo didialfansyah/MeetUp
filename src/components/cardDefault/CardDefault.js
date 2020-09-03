@@ -14,7 +14,7 @@ const CardDefault = ({heading, link, content}) => {
     );
 }
 
-CardDefault.propType = {
+CardDefault.propTypes = {
     heading : PropTypes.string.isRequired,
     link : PropTypes.string,
     content : PropTypes.string.isRequired
