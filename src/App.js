@@ -27,6 +27,21 @@ function App() {
     },
   ];
 
+  const dataMeet = [
+    {
+      nama : 'Location',
+      data : 'Medan, Indonesia'
+    },
+    {
+      nama : 'Members',
+      data : '12.130'
+    },
+    {
+      nama : 'Organizers',
+      data : 'Didi Alfansyah'
+    }
+  ];
+
   return (
     <div className="container-full">
       <Navbar
@@ -40,24 +55,7 @@ function App() {
           radius="none"
           width="250px"
           height="270px"
-          htmIn = {
-                  <table>
-                    <tbody>
-                      <tr>
-                          <td>Location</td>
-                          <td>Medan, Indonesia</td>
-                      </tr>
-                      <tr>
-                          <td>Members</td>
-                          <td>12.310</td>
-                      </tr>
-                      <tr>
-                          <td>Organizers</td>
-                          <td>Didi Alfansyah</td>
-                      </tr>
-                    </tbody>
-                  </table>
-          }
+          listOrder = {dataMeet}
         />
       </div>
 
