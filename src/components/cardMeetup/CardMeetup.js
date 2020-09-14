@@ -1,34 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 
+import {MeetUp, MeetChild, Title, Tab, Tbd, Tr, Td} from './MeetUp.style'
 import Images from '../images/Images'
 import Button from '../button/Button'
 
-const MeetUp =  styled.div`
-    display: flex;
-    background: #2d3436;
-    color: #fff;
-`;
-
-const MeetChild = styled.div`
-    margin: 10px;
-    font-family: helvetica;
-    font-size: 16px;
-`;
-
-const Heading = styled.h2`
-    font-size: 30px;
-`;
-
-const Tab = styled.table``;
-const Tr = styled.tr``;
-const Td = styled.td`
-    padding : ${props => props.first ? "8px 0px" : "8px 50px"};
-`;
-const CardMeetup = ({heading, listOrder, display, src, radius, width, height, hide}) => {
-    console.log(listOrder)
-    listOrder.map((element) => console.log(element.nama))
+const CardMeetup = ({heading, listOrder, src, radius, width, height, dis}) => {
     return (
         <MeetUp>
             <MeetChild>
@@ -40,10 +17,22 @@ const CardMeetup = ({heading, listOrder, display, src, radius, width, height, hi
                 />
             </MeetChild>
             <MeetChild>
-                <Heading>{heading}</Heading>
-                <ul>
-                </ul>
-                <Button type="submit" value="Join Us" hide={hide}/>                
+                <Title>{heading}</Title>
+                <Tab>
+                    <Tbd>
+                        {
+                            listOrder.map((element) => 
+                                <Tr key={element.nama}>
+                                    <Td first>{element.nama}</Td>
+                                    <Td>{element.data}</Td>
+                                </Tr>
+                            )
+                        }
+                    </Tbd>
+                </Tab>
+                <div style={{display: dis}}>
+                    <Button stt="stt" value="Join Us"/> <Button stt="" value="New Member"/>                
+                </div>
             </MeetChild>
         </MeetUp>
     );
@@ -55,20 +44,19 @@ const CardMeetup = ({heading, listOrder, display, src, radius, width, height, hi
 }))*/
 CardMeetup.propTypes = {
     heading : PropTypes.string.isRequired,
-    display : PropTypes.string, 
+    listOrder : PropTypes.array.isRequired,
     src : PropTypes.string.isRequired, 
     radius : PropTypes.string, 
     width : PropTypes.string, 
     height : PropTypes.string, 
-    hide :PropTypes.string
+    dis :PropTypes.string
 }
 
 CardMeetup.defaultProps = {
-    display : "inherit",
     radius : "none",
     width : "100px",
     height : "100px",
-    hide : "inherit"
+    dis : "none"
 }
 
 export default CardMeetup

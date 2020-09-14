@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './cardDefault.css'
+import {CardDef, Link} from './cardDefault.style.js'
+
 const CardDefault = ({heading, link, content}) => {
     return (
-        <div className="cardDefault">
+        <CardDef>
             <h3>{heading}</h3>
-            <a href={link}>Getting Start...</a>
+            <Link href={link}>Getting Start...</Link>
             <p>
                 {content}
             </p>
-        </div>
+        </CardDef>
     );
 }
 

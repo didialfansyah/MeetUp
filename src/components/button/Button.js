@@ -1,22 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import "./button.css"
-const Button = ({type, value, hide}) => {
+import {Btn} from './button.style'
+
+const Button = ({type, value, stt}) => {
     return (
-        <button className="btnSubmit" style={{display:hide}} type={type}>{value}</button>
+        <Btn type={type} stt={stt}>{value}</Btn>
     );
 }
 
 Button.propTypes = {
     type : PropTypes.oneOf(['submit', 'reset', 'button']),
     value : PropTypes.string.isRequired,
-    hide : PropTypes.string
+    stt : PropTypes.string
 }
 
 Button.defaultProps = {
     type : 'submit',
-    hide : "inherit"
+    hide : "inherit",
+    stt : 'stt'
 }
 
 export default Button

@@ -13,17 +13,20 @@ function App() {
     {
       date : "31 Agustus 2020",
       content : "Etiam lobortis a tortor non commodo. Praesent lobortis tempus orci sit amet congue.",
-      view : "120"
+      view : "120",
+      stt : 'stt',
     },
     {
       date : "24 Agustus 2020",
       content : "Etiam lobortis a tortor non commodo. Praesent lobortis tempus orci sit amet congue.",
-      view : "127"
+      view : "127",
+      stt : ''
     },
     {
       date : "11 Agustus 2020",
       content : "Etiam lobortis a tortor non commodo. Praesent lobortis tempus orci sit amet congue.",
-      view : "146"
+      view : "145",
+      stt : 'stt',
     },
   ];
 
@@ -42,6 +45,13 @@ function App() {
     }
   ];
 
+  const dataMeet2 = [
+    {
+      nama : 'Didi Alfansyah',
+      data : '4 Others'
+    }
+  ];
+
   return (
     <div className="container-full">
       <Navbar
@@ -56,6 +66,7 @@ function App() {
           width="250px"
           height="270px"
           listOrder = {dataMeet}
+          dis = 'inherite'
         />
       </div>
 
@@ -87,16 +98,7 @@ function App() {
             width="120px"
             height="120px"
             hide="none"
-            htmIn = {
-              <table>
-                <tbody>
-                  <tr>
-                      <td>Didi Alfansyah</td>
-                      <td>4 Others</td>
-                  </tr>
-                </tbody>
-              </table>
-            }
+            listOrder = {dataMeet2}
           />
         </div>
       </div>

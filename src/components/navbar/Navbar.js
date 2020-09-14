@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './navbar.css'
+import {Nav, Navbars, Item, Link} from './navbar.style.js'
 
 const Navbar = ({list}) => {
     return (
-        <div className="nav">
-            <ul className="navbar">
+        <Nav>
+            <Navbars>
                 {
                     list.map((show) => 
-                        <li key={show}><a href=":blank">{show}</a></li>
+                        <Item key={show}><Link href=":blank">{show}</Link></Item>
                     )
                 }
-            </ul>
-        </div>
+            </Navbars>
+        </Nav>
     );
 }
 
